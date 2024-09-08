@@ -39,10 +39,20 @@ bot(String userInp) {
     "was stimmt nicht mit dir?"
   ];
 
+  List<String> actives = [
+    "Hast du Hobbies?",
+    "Was machst du am liebsten?",
+    "Was trebst so in deiner Freizeit?",
+  ];
+  List<String> sense = [
+    "Was ist der Sinn desw Lebens?",
+    "Kennst du die Antwort auf alles Fragen?",
+  ];
+
   while (true) {
     String userInp = stdin.readLineSync()!.toString();
 
-    if (userInp.contains("beende") && userInp.contains("Beende")) {
+    if (userInp.contains("beende") || userInp.contains("Beende")) {
       print("Bis zum nächsten Mal!");
       break;
     }
@@ -57,6 +67,11 @@ bot(String userInp) {
       print("Das Wetter ist heute schön, oder?");
     } else if (dumb.any((element) => userInp.contains(element))) {
       print("Dumm ist der, der dummes tut ; )... mein lieber Freund! ");
+    } else if (actives.any((element) => userInp.contains(element))) {
+      print(
+          "Ich stricke am liebsten in meiner Freizeit! Die Ruhe und die Ausgeglichenheit dabei");
+    } else if (sense.any((element) => userInp.contains(element))) {
+      print("42!");
     } else {
       print("Das ist interessant. Kannst du mir mehr darüber erzählen?");
     }

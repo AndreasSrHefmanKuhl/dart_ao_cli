@@ -18,14 +18,14 @@ void registerUser(String username, String password) {
   print('Benutzer erfolgreich registriert.');
 }
 
-bool loginUser(String username, String password) {
-  User? user = profile[username];
+bool loginUser(name, password) {
+  User? user = profile[name];
 
   if (user != null && user.password == password) {
     print('Anmeldung erfolgreich!');
     // Hier würde man zum Hauptmenü wechseln (in einer Konsolenanwendung)
     // ... zum Beispiel:
-    print('Was geht $username! :');
+    print('Was geht $name! :');
     return true;
   } else {
     print('Ungültige Anmeldedaten.');
