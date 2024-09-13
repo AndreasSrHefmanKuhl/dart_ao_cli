@@ -45,7 +45,7 @@ bot(String userInp) {
     "Was trebst so in deiner Freizeit?",
   ];
   List<String> sense = [
-    "Was ist der Sinn desw Lebens?",
+    "Was ist der Sinn des Lebens?",
     "Kennst du die Antwort auf alles Fragen?",
   ];
 
